@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   before_filter :randomise
 
   def randomise
-    @drop = [
-      label: "stories", path: stories_path,
-      label: "poems", path: poems_path, param: Poem.sample,
-    ].sample
-  end
+      @drop = [
+      	label: "stories", path: story_path(Story.all.sample),
+      	label: "poems", path: poem_path(Poem.all.sample),
+      ].sample
+	end
 end

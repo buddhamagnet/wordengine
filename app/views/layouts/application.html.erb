@@ -32,7 +32,7 @@
         <!-- Left Nav Section -->
         <ul class="left">
           <li><%= link_to 'about', page_path('about') %></li>
-          <li><%= link_to @drop[:label], @drop.path(@drop.param) %></li>
+          <li><%= link_to @drop[:label], @drop[:path] %></li>
         </ul>
       </section>
     </nav>

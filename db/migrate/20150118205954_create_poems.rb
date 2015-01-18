@@ -1,11 +1,11 @@
 class CreatePoems < ActiveRecord::Migration
   def change
     create_table :poems do |t|
-      t.references :user_id, index: true
+      t.references :user, index: true
       t.text :poem
 
       t.timestamps null: false
     end
-    add_foreign_key :poems, :user_ids
+    add_foreign_key :poems, :user
   end
 end

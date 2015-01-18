@@ -14,23 +14,23 @@
 ActiveRecord::Schema.define(version: 20150118205954) do
 
   create_table "poems", force: :cascade do |t|
-    t.integer  "user_id_id"
+    t.integer  "user_id"
     t.text     "poem"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "poems", ["user_id_id"], name: "index_poems_on_user_id_id"
+  add_index "poems", ["user_id"], name: "index_poems_on_user_id"
 
   create_table "stories", force: :cascade do |t|
     t.string   "name"
-    t.integer  "user_id_id"
+    t.integer  "user_id"
     t.text     "extract"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "stories", ["user_id_id"], name: "index_stories_on_user_id_id"
+  add_index "stories", ["user_id"], name: "index_stories_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
