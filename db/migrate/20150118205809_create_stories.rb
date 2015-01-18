@@ -7,6 +7,6 @@ class CreateStories < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_foreign_key :stories, :user
+    add_foreign_key :stories, :user_id
   end
 end
