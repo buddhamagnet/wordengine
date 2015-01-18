@@ -10,9 +10,38 @@
   </head>
 
   <body>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">word engine</a></h1>
+        </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+      <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="active"><a href="#">emit</a></li>
+          <li class="has-dropdown">
+            <a href="#">alice</a>
+            <ul class="dropdown">
+              <li><a href="#">eat me</a></li>
+              <li><a href="#">drink me</a></li>
+              <li class="active"><a href="#">alive</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li><a href="#">randomise</a></li>
+        </ul>
+      </section>
+    </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
+    <div class="container">
+      <%= yield %>
+      <%= javascript_include_tag "application" %>
+    </div>
   </body>
 </html>
