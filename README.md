@@ -1,4 +1,4 @@
-== THE WORD ENGINE
+==THE WORD ENGINE
 
 This is a word engine. A particle accelerator for writers and artists. The CERN of the word.
 
