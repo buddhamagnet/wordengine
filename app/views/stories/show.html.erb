@@ -1,0 +1,7 @@
+<h3><%= @story.name %></h3>
+<h5>created by writer <%= @story.user.id %></h5>
+<% @story.fragments.each do |fragment| %>
+  <p><%= fragment.content %></p>
+<% end %>
+
+<%= link_to "add a fragment", root_path %>

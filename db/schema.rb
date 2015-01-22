@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118205954) do
+ActiveRecord::Schema.define(version: 20150122145749) do
+
+  create_table "fragments", force: :cascade do |t|
+    t.integer  "story_id"
+    t.integer  "user_id"
+    t.string   "type"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "fragments", ["story_id"], name: "index_fragments_on_story_id"
 
   create_table "poems", force: :cascade do |t|
     t.integer  "user_id"
