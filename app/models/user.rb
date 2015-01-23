@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :trackable, :validatable
 
   # Nullify is the default, we make it explicit here to make it
   # known that when we delete a user, their stories and poems
