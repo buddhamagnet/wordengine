@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   resources :stories
 
-  resources :users, only: [:show]
+  resources :users, only: [:index, :show]
 
   devise_for :users, :path => '', :path_names => {sign_in: 'login', sign_out: 'logout'}
-  
-  get "pages/:page" => 'pages#page', as: 'page' 
+
+  get "pages/:page" => 'pages#page', as: 'page'
 
   root 'pages#home'
 end

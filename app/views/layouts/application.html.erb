@@ -21,12 +21,13 @@
       <!-- Right Nav Section -->
         <ul class="right">
           <%= render 'layouts/user_state' %>
-          <li class="active"><a href="#">emit</a></li>
+          <!--<li class="active"><a href="#">emit</a></li>-->
           <li class="has-dropdown">
-            <a href="#">alice</a>
+            <a href="#">engine</a>
             <ul class="dropdown">
               <li><a href="#">eat me</a></li>
               <li><a href="#">drink me</a></li>
+              <li><a href="#">word lab</a></li>
             </ul>
           </li>
         </ul>
@@ -34,6 +35,7 @@
         <ul class="left">
           <li><%= link_to 'about', page_path('about') %></li>
           <li><%= link_to 'stories', stories_path %></li>
+          <li><%= link_to 'writers', users_path %></li>
         </ul>
       </section>
     </nav>
